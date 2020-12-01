@@ -1,0 +1,99 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: lato;
+   
+   background-image: linear-gradient((to right, rgba(195, 233, 233, 0), rgb(0, 132, 255)));
+
+  }
+  nav {
+    position: fixed;
+    z-index: 1;
+    left: 15%;
+    top: 3%;
+        width: 1170px;
+    }
+    .logo {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+        float: left;
+    }
+    .menu {
+    float: right;
+    }
+    .menu a {
+    text-decoration: none;
+    color: rgb(2, 2, 34);
+    padding: 0 15px;
+    font-size: 18px;
+    }
+  .banner-img {
+  width: 100%;
+  height: 75vh;
+  overflow: hidden;
+  position: relative;
+  border-radius: 25px;
+ 
+  ;
+  }
+  
+  .banner-img img {
+  width: 100%;
+  animation: animate 40s ease;
+  position: absolute;
+  }
+  .banner-text {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  width: 500px;
+  height: 200px;
+  background: rgba(122, 152, 236, 0.5);
+  color: #ffffff;
+  padding: 3%;
+  }
+  
+  .banner-text h2 {
+  text-transform: uppercase;
+  font-size: 38px;
+  margin: 10px 0;
+  }
+  .banner-text p {
+  text-transform: uppercase;
+  line-height: 28px;
+  }
+  .banner-text a {
+  background: blue;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px;
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 50px;
+  }
+  
+  @-webkit-keyframes animate {
+  0% {
+  -webkit-transform-origin: bottom right;
+  -moz-transform-origin: bottom right;
+  -ms-transform-origin: bottom right;
+  -o-transform-origin: bottom right;
+  transform-origin: bottom right;
+  transform: scale(1.0);
+  }
+  100% {
+  transform: scale(1.3);
+  }
+  }
+  
+
+  .footer
+  {
+      background-color: darkblue;
+      text-decoration-color: darkgray;
+      width:100%;
+  }
