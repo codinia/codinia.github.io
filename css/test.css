@@ -110,6 +110,7 @@ body {
 .slider__image {
   font-size: 2.7rem;
       color: #2196F3;
+      size: 75%;
 }
 .slider__caption {
   font-weight: 500;
