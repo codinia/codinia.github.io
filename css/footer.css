@@ -2,8 +2,8 @@ footer {
     display: flex;
     flex-flow: row wrap;
     padding: 30px 30px 20px 30px;
-    color: #2f2f2f;
-    background-color:rgb(17, 0, 44);
+  
+    background-color:#0077be;
     border-top: 1px solid #e5e5e5;
    
   }
@@ -20,18 +20,18 @@ footer {
     font-family: 'Pacifico', cursive;
     font-weight: 400;
     text-transform: lowercase;
-    font-size: 1.5rem;
+    font-size: 13px;
   }
   
   .footer__addr h2 {
     margin-top: 1.3em;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 400;
   }
   
   .nav__title {
     font-weight: 400;
-    font-size: 15px;
+    font-size: 13px;
   }
   
   .footer address {
@@ -45,18 +45,19 @@ footer {
     justify-content: center;
     height: 36px;
     max-width: max-content;
-    background-color: rgb(33, 33, 33, 0.07);
+    background-color:darkblue;
     border-radius: 100px;
-    color: #2f2f2f;
+    color:whitesmoke;
     line-height: 0;
     margin: 0.6em 0;
-    font-size: 1rem;
+    font-size: 13px;
     padding: 0 1.3em;
   }
   
   .footer ul {
     list-style: none;
     padding-left: 0;
+    font-size: 9px;
   }
   
   .footer li {
@@ -78,7 +79,9 @@ footer {
   }
   
   .nav__ul a {
-    color: #999;
+    color:whitesmoke;
+    font-size: 9px;
+
   }
   
   .nav__ul--extra {
