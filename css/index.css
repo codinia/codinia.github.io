@@ -56,7 +56,9 @@ nav ul li:hover{
 
 
 .banner-img {
-    width: 100%;
+    opacity: 0.5%;
+    float: right;
+    width: 50;
     height: 75vh;
     border-top: #0077be 30px;
     overflow: hidden;
@@ -70,6 +72,7 @@ nav ul li:hover{
     width: 90;
     animation: animate infinite ease;
     position: absolute;
+    border-bottom:5px #0077be;
     }
     .banner-text {
     position: absolute;
