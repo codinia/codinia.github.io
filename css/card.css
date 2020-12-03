@@ -22,11 +22,7 @@ margin-left: auto;
   
  
   
-  a {
-    text-decoration: none;
-    font-size: 22px;
-    color:rgb(233, 233, 233);
-  }
+ 
 
   .card:hover {
     transform: scale(1.15);
