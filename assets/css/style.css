@@ -2047,6 +2047,11 @@ p.form-message.error.form-message.error {
     color: #fff
 }
 
+.footer_heading {
+    display: flex;
+    align-items: center;
+}
+
 .footer_heading h1 {
     color: #fff;
 }
