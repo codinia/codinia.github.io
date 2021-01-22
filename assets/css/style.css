@@ -692,7 +692,11 @@ s .slick-slide {
 @media only screen and (min-width:768px) and (max-width:991px) {
     .navbar-nav .nav-item a {
         display: block;
-        padding: 4px 0
+        padding: 4px 0;
+        color: #38424d;
+    }
+    .navbar-nav .nav-item.active a {
+        color: #0177bf;
     }
 }
 
