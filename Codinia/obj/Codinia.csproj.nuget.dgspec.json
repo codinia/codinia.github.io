@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\T440\\source\\repos\\Codinia\\Codinia\\Codinia.csproj": {}
+    "C:\\Codinia\\codinia.github.io\\Codinia\\Codinia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\T440\\source\\repos\\Codinia\\Codinia\\Codinia.csproj": {
+    "C:\\Codinia\\codinia.github.io\\Codinia\\Codinia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\T440\\source\\repos\\Codinia\\Codinia\\Codinia.csproj",
+        "projectUniqueName": "C:\\Codinia\\codinia.github.io\\Codinia\\Codinia.csproj",
         "projectName": "Codinia",
-        "projectPath": "C:\\Users\\T440\\source\\repos\\Codinia\\Codinia\\Codinia.csproj",
+        "projectPath": "C:\\Codinia\\codinia.github.io\\Codinia\\Codinia.csproj",
         "packagesPath": "C:\\Users\\T440\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\T440\\source\\repos\\Codinia\\Codinia\\obj\\",
+        "outputPath": "C:\\Codinia\\codinia.github.io\\Codinia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\T440\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,24 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AspNetCoreHero.ToastNotification": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.11.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.5, )"

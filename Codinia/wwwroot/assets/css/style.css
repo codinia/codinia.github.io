@@ -427,7 +427,7 @@ s .slick-slide {
 .header_navbar {
     top: 0;
     left: 0;
-    position: fixed;
+    /*position: fixed;*/
     width: 100%;
     z-index: 99;
     -webkit-transition: all .3s ease-out 0s;
@@ -1704,7 +1704,7 @@ s .slick-slide {
 
 .single_blog {
     border-radius: 10px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     background-color: #fff;
     -webkit-transition: all .3s ease-out 0s;
     -moz-transition: all .3s ease-out 0s;
@@ -2562,3 +2562,18 @@ p {
 .xtarget {
     padding-top: 60px;
 }
+
+.html {
+    height: 100%;
+}
+
+#container {
+    min-height: 100%;
+    _height: 100%; 
+}
+
+#footer {
+    height: 215px;
+    margin-top: -215px;
+}
+

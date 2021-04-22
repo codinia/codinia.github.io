@@ -7,7 +7,6 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8DRKE1ZEZ5"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-
         function gtag() {
             dataLayer.push(arguments);
         }
@@ -25,7 +24,7 @@
     <meta charset="UTF-8">
 
     <link rel="shortcut icon" href="assets/images/footer-img.png" type="image/png">
-    
+
     <link href="~/assets/css/animate.css" rel="stylesheet" />
     <link rel="stylesheet" href="~/assets/css/slick.css">
 
@@ -38,31 +37,32 @@
 </head>
 
 <body>
+    <div class="container-scroller">
 
-
-    <div class="preloader">
-        <div class="loader">
-            <div class="ytp-spinner">
-                <div class="ytp-spinner-container">
-                    <div class="ytp-spinner-rotator">
-                        <div class="ytp-spinner-left">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                        <div class="ytp-spinner-right">
-                            <div class="ytp-spinner-circle"></div>
+        @*<div class="preloader">
+            <div class="loader">
+                <div class="ytp-spinner">
+                    <div class="ytp-spinner-container">
+                        <div class="ytp-spinner-rotator">
+                            <div class="ytp-spinner-left">
+                                <div class="ytp-spinner-circle"></div>
+                            </div>
+                            <div class="ytp-spinner-right">
+                                <div class="ytp-spinner-circle"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </div>*@
 
-    <partial name="~/Views/Shared/PartialViews/_Header.cshtml" />
+        <partial name="~/Views/Shared/PartialViews/_Header.cshtml" />
 
-    @RenderBody();
+        @RenderBody();
 
         <partial name="~/Views/Shared/PartialViews/_Footer.cshtml" />
-    
+    </div>
+
     <a href="# " class="back-to-top "><i class="lni lni-chevron-up "></i></a>
     <script src="assets/js/vendor/jquery-1.12.4.min.js " type="f2b88261c11595ea9ef10632-text/javascript "></script>
     <script src="assets/js/vendor/modernizr-3.7.1.min.js " type="f2b88261c11595ea9ef10632-text/javascript "></script>
@@ -82,19 +82,8 @@
 
     <script src="~/assets/js/main.js " type="f2b88261c11595ea9ef10632-text/javascript "></script>
     <script src="~/ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js"></script>
+    @await Component.InvokeAsync("Notyf")
 
 </body>
-
-
-<!-- <script>
-    $(document).ready(function() {
-        $('.thing').slick({
-            dots: true,
-            arrows: false,
-            autoplay: true,
-            autoplaySpeed: 2000
-        })
-    });
-</script> -->
 
 </html>
