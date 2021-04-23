@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Codinia.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +9,19 @@ namespace Codinia.Controllers
 {
     public class BlogController : Controller
     {
+        private readonly CodiniaContext _dbContext;
+        public BlogController
+            (
+            CodiniaContext dbContext
+            )
+        {
+            _dbContext = dbContext;
+        }
         public IActionResult Blog()
         {
-            return View("Blog");
+            var blogPost = _dbContext.BlogPost
+                .ToList();
+            return View(blogPost);
         }
         public IActionResult EightTips()
         {
@@ -20,9 +31,10 @@ namespace Codinia.Controllers
         {
             return View();
         }
-        public IActionResult BlogPost()
+        public IActionResult BlogPost(string blogurl)
         {
-            return View();
+            var blogpost = _dbContext.BlogPost.FirstOrDefault(o => o.PostURL == blogurl);
+            return View(blogpost);
         }
         public IActionResult TenTips()
         {
