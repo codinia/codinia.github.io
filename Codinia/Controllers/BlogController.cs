@@ -10,10 +10,7 @@ namespace Codinia.Controllers
     public class BlogController : Controller
     {
         private readonly CodiniaContext _dbContext;
-        public BlogController
-            (
-            CodiniaContext dbContext
-            )
+        public BlogController (CodiniaContext dbContext)
         {
             _dbContext = dbContext;
         }

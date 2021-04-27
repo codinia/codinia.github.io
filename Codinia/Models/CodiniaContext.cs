@@ -24,5 +24,8 @@ namespace Codinia.Models
         public string PostTags { get; set; }
         public DateTime PostDate { get; set; }
         public string ThumbnailImageUrl { get; set; }
+        public string TableOfContent { get; set; }
+        public string Category { get; set; }
+        public string ReadTime { get; set; }
     }
 }

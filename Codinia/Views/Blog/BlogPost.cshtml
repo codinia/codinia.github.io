@@ -23,14 +23,29 @@
                         <img class="blog-img-section img-responsive" style="max-height: 500px;" src="@Html.Raw(Model.ThumbnailImageUrl)">
                     </div>
 
+                    @Html.Raw(Model.TableOfContent)
                     @Html.Raw(Model.PostContent)
+                    <div id="disqus_thread"></div>
+                    <script>
+    var disqus_config = function () {
+        this.page.url = "@Context.Request.Scheme://@Context.Request.Host@Context.Request.Path";
+        this.page.identifier = "@Context.Request.Scheme://@Context.Request.Host@Context.Request.Path";
+    };
 
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//codinia-com.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
+                    <script id="dsq-count-scr" src="//codinia-com.disqus.com/count.js" async></script>
                 </div>
             </div>
         </div>
     </div>
-
 
 </section>
 
