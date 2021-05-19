@@ -1,9 +1,7 @@
 ﻿using Codinia.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Codinia.Controllers
 {
@@ -37,5 +35,10 @@ namespace Codinia.Controllers
         {
             return View();
         }
+        public IActionResult StaticBlog()
+        {
+            return View();
+        }
+       
     }
 }

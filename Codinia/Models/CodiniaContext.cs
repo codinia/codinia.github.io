@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Codinia.Models
@@ -11,6 +9,7 @@ namespace Codinia.Models
         public CodiniaContext(DbContextOptions<CodiniaContext> options) : base(options)
         { }
         public DbSet<BlogPost> BlogPost { get; set; }
+
     }
     public class BlogPost
     {

@@ -1,38 +1,41 @@
 ﻿@model BlogPost
 @{
-    //ViewData["Title"] = "EightTips";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.PostTitle = "Codinia | " + Model.PostTitle;
+    ViewBag.PostTags = Model.PostTags;
+    ViewBag.PostDescription = Model.PostDescription;
+    ViewBag.AuthorName = Model.AuthorName;
+    Layout = "~/Views/Shared/_BlogLayout.cshtml";
 }
-
 <section id="blog " class="blog_area pt-115 pb-120 ">
     <div class="container ">
         <div class="container-fluid">
             <div class="blog-content-area ">
                 <div class="row justify-content-center blog-background ">
                 </div>
-
+                <div claas="wow bounceInUp"><h2>Hello I am for animation</h2></div>
                 <div class="blog_content ">
                     <h1> @Html.Raw(Model.PostTitle)</h1>
                     <ul class="blog_meta d-flex justify-content-center ">
                         <li>By: <a href="@Html.Raw(Model.AuthorURL)">@Html.Raw(Model.AuthorName)</a>&nbsp; / &nbsp;</li>
                         <li>03 Feb 2021</li>
                     </ul>
-                    <div> </div>
                     <div style="text-align: center;">
-
                         <img class="blog-img-section img-responsive" style="max-height: 500px;" src="@Html.Raw(Model.ThumbnailImageUrl)">
                     </div>
-
                     @Html.Raw(Model.TableOfContent)
                     @Html.Raw(Model.PostContent)
+
+
+
+                @await Component.InvokeAsync("RelatedBlog" , new { category = Model.Category })
+                    
                     <div id="disqus_thread"></div>
                     <script>
     var disqus_config = function () {
         this.page.url = "@Context.Request.Scheme://@Context.Request.Host@Context.Request.Path";
         this.page.identifier = "@Context.Request.Scheme://@Context.Request.Host@Context.Request.Path";
     };
-
-    (function () { // DON'T EDIT BELOW THIS LINE
+    (function () {
         var d = document, s = d.createElement('script');
         s.src = '//codinia-com.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
@@ -40,97 +43,10 @@
     })();
                     </script>
                     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
                     <script id="dsq-count-scr" src="//codinia-com.disqus.com/count.js" async></script>
                 </div>
             </div>
         </div>
     </div>
-
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<section>
-    <div class="card-deck">
-        <div class="col-lg-4 col-md-7 " style="padding-bottom: 20px; ">
-            <div class="single_blog mt-30 wow fadeIn " data-wow-duration="0.5s " data-wow-delay="0.3s ">
-                <div class="blog_image ">
-                    <img src="assets/images/blog-1.jpg " alt="blog ">
-                    <img src="assets/images/8 Tips for writing a good content.jpg" alt="blog">
-                </div>
-                <div class="blog_content ">
-                    <ul class="blog_meta d-flex justify-content-between ">
-                        <li>By: <a href="# ">Musharof Chowdury</a></li>
-                        <li>15 June 2024</li>
-                        <li>By: <a href="https://www.linkedin.com/in/shumaila-nawaz-7b32b0204/" target="_blank">Shumaila Nawaz</a></li>
-                        <li>3 Feb 2021</li>
-                    </ul>
-                    <h3 class="blog_title "><a href="# ">How to track your business revenue</a></h3>
-                    <a href="# " class="more ">Read More</a>
-                    <h3 class="blog_title "><a href="https://www.codinia.com/blog/8-Tips-for-writing-a-good-content.html">8 Tips for writing a good content</a></h3>
-                    <a href="https://www.codinia.com/blog/8-Tips-for-writing-a-good-content.html" class="more main-btn">Read More</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-7 ">-->
-<!--11 tips and techniques for writing a good headline-->
-<!--<div class="col-lg-4 col-md-7 " style="padding-bottom: 20px; ">
-        <div class="single_blog mt-30 wow fadeIn " data-wow-duration="0.5s " data-wow-delay="0.6s ">
-            <div class="blog_image ">
-                <img src="assets/images/blog-2.jpg " alt="blog ">
-                <img src="assets/images/11 Tips and technique for a writing headline.jpg" alt="blog ">
-            </div>
-            <div class="blog_content ">
-                <ul class="blog_meta d-flex justify-content-between ">
-                    <li>By: <a href="# ">Musharof Chowdury</a></li>
-                    <li>15 June 2024</li>
-                    <li>By: <a href="https://www.linkedin.com/in/shumaila-nawaz-7b32b0204/" target="_blank">Shumaila Nawaz</a></li>
-                    <li>12 Feb 2021</li>
-                </ul>
-                <h3 class="blog_title "><a href="# ">Improving products depending on feedback</a></h3>
-                <a href="# " class="more ">Read More</a>
-                <h3 class="blog_title"><a href="https://www.codinia.com/blog/11-Tips-and-techniques-for-writing-a-good-headline.html">11 Tips and techniques for writing a good headline</a></h3>
-                <a href="https://www.codinia.com/blog/11-Tips-and-techniques-for-writing-a-good-headline.html" class="more main-btn ">Read More</a>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="col-lg-4 col-md-7 ">
-    <div class="single_blog mt-30 wow fadeIn " data-wow-duration="0.5s " data-wow-delay="0.9s ">-->
-<!--10 tips for how to be productive while working from home-->
-<!--<div class="col-lg-4 col-md-7 " style="padding-bottom: 20px; ">
-                    <div class=" single_blog mt-30 wow fadeIn " data-wow-duration="0.5s " data-wow-delay="0.9s ">
-                        <div class="blog_image ">
-                            <img src="assets/images/blog-3.jpg " alt="blog ">
-                            <img src="assets/images/10 Tips for how to be prodictive while working from home.jpg" alt="blog ">
-                        </div>
-                        <div class="blog_content ">
-                            <ul class="blog_meta d-flex justify-content-between ">
-                                <li>By: <a href="# ">Musharof Chowdury</a></li>
-                                <li>15 June 2024</li>
-                                <li>By: <a href="https://www.linkedin.com/in/shumaila-nawaz-7b32b0204/" target="_blank">Shumaila Nawaz</a></li>
-                                <li>24 Feb 2021</li>
-                            </ul>
-                            <h3 class="blog_title "><a href="# ">How to diversify your audience</a></h3>
-                            <a href="# " class="more ">Read More</a>
-                            <h3 class="blog_title "><a href="https://www.codinia.com/blog/10-Tips-for-how-to-be-productive-when-working-frome-home.html">10 Tips for how to be productive when working from home.</a></h3>
-                            <a href="https://www.codinia.com/blog/10-Tips-for-how-to-be-productive-when-working-frome-home.html" class="more main-btn">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>-->

@@ -396,3 +396,8 @@ C:\Codinia\codinia.github.io\Codinia\obj\Debug\netcoreapp3.1\Codinia.dll
 C:\Codinia\codinia.github.io\Codinia\obj\Debug\netcoreapp3.1\Codinia.pdb
 C:\Codinia\codinia.github.io\Codinia\obj\Debug\netcoreapp3.1\Codinia.genruntimeconfig.cache
 C:\Codinia\codinia.github.io\Codinia\obj\Debug\netcoreapp3.1\Razor\Views\Blog\BlogPost.cshtml.g.cs
+C:\Codinia\codinia.github.io\Codinia\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_BlogLayout.cshtml.g.cs
+C:\Codinia\codinia.github.io\Codinia\obj\Debug\netcoreapp3.1\Razor\Views\Blog\StaticBlog.cshtml.g.cs
+C:\Codinia\codinia.github.io\Codinia\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Codinia\codinia.github.io\Codinia\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
+C:\Codinia\codinia.github.io\Codinia\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\RelatedBlog\Default.cshtml.g.cs

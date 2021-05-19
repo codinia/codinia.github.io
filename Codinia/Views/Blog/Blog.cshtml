@@ -1,11 +1,26 @@
 ﻿@model List<BlogPost>
 
 @{
-    ViewData["Title"] = "Blog";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.PostTitle = "Codina | Recent from the blog";
+    Layout = "~/Views/Shared/_BlogLayout.cshtml";
 }
 <section id="blog " class="blog_area pt-115 pb-120 ">
-
+        <div class="container">
+            <div class="breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        @*<li class="breadcrumb-item"><a href="#home">Home</a></li>
+        <li class="breadcrumb-item"><a href="#about">About</a></li>
+        <li class="breadcrumb-item"><a href="#why">Why Us</a></li>
+        <li class="breadcrumb-item"><a href="#Services">Services</a></li>
+        <li class="breadcrumb-item"><a href="#trusted-By">Trusted By</a></li>*@
+                        <li class="breadcrumb-item active" aria-current="#Home"><i class="fa fa-home fa-lg" aria-hidden="true"></i></li>
+                        <li class="breadcrumb-item"><a href="#blog">Blog</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    
     <div class="container ">
         <div class="row justify-content-center ">
             <div class="col-lg-6 ">
@@ -16,12 +31,9 @@
             </div>
         </div>
         <div class="row justify-content-center blog-background ">
-
             @foreach (var blogpost in Model)
             {
-
                 <div class="col-lg-4 col-md-7 " style="padding-bottom: 20px; ">
-
                     <div class="card single_blog mt-30 wow fadeIn" data-wow-duration="0.5s " data-wow-delay="0.3s " style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.3s; animation-name: fadeIn;">
                         <a class="" href="blog-post/@blogpost.PostURL">
                             <div>

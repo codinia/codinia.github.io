@@ -1,15 +1,22 @@
 $(function() {
     "use strict";
     $(window).on('load', function(event) { $('.preloader').delay(500).fadeOut(500); });
-    $(window).on('scroll', function(event) { var scroll = $(window).scrollTop(); if (scroll < 20) { $(".header_navbar").removeClass("sticky"); } else { $(".header_navbar").addClass("sticky"); } });
+    $(window).on('scroll', function (event) { var scroll = $(window).scrollTop(); if (scroll < 20) { $(".header_navbar").removeClass("sticky"); } else { $(".header_navbar").addClass("sticky"); } });
+    debugger;
     var scrollLink = $('.page-scroll');
-    $(window).scroll(function() {
+    $(window).scroll(function () {
+        debugger;
         var scrollbarLocation = $(this).scrollTop();
-        scrollLink.each(function() {
-            var sectionOffset = $(this.hash).offset().top - 73;
-            if (sectionOffset <= scrollbarLocation) {
-                $(this).parent().addClass('active');
-                $(this).parent().siblings().removeClass('active');
+        scrollLink.each(function () {
+            try {
+                var sectionOffset = $(this.hash).offset().top - 73;
+                if (sectionOffset <= scrollbarLocation) {
+                    $(this).parent().addClass('active');
+                    $(this).parent().siblings().removeClass('active');
+                }
+            }
+            catch (err) {
+
             }
         });
     });
@@ -25,4 +32,5 @@ $(function() {
     });
     var wow = new WOW({ boxClass: 'wow', mobile: false, })
     wow.init();
+    
 });

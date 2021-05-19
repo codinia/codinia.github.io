@@ -1,12 +1,12 @@
 @import "https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&amp;display=swap";
 
-body {
+/*body {
     font-family: nunito, sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #747e88;
     background-color: #fbfbff;
-}
+}*/
 
 * {
     margin: 0;
@@ -37,11 +37,11 @@ a:hover {
 span,
 a {
     display: inline-block
-}*/
+}
 
 a {
     color: #0177bf
-}
+}*/
 
     a:hover {
         color: #0177bf
@@ -648,7 +648,7 @@ s .slick-slide {
     width: 100%;
 }
 
-.navbar-nav .nav-item.active > {
+/*.navbar-nav .nav-item.active >::before {
     position: absolute;
     content: '';
     background-color: #0177bf;
@@ -661,7 +661,7 @@ s .slick-slide {
     transition: all .3s ease-out 0s;
     -o-transition: all .3s ease-out 0s;
     transition: all .3s ease-out 0s;
-}
+}*/
 
 .navbar-nav .nav-item:hover .sub-menu {
     top: 100%;
@@ -709,6 +709,13 @@ s .slick-slide {
         visibility: visible
     }
 }
+
+
+.navbar-nav .nav-item.active>a::before, .navbar-nav .nav-item:hover>a::before {
+    width: 100%;
+}
+
+
 
 @media(max-width:767px) {
     .navbar-nav .nav-item .sub-menu {
@@ -991,8 +998,7 @@ s .slick-slide {
             position: relative;
             z-index: 9
         }
-
-            .header_hero_content ul li .play::before {
+.header_hero_content ul li .play::before {
                 position: absolute;
                 content: '';
                 top: 0;
@@ -2427,8 +2433,8 @@ p.form-message.error {
 
 .partner-logo-img {
     max-width: 100%;
-    /* margin: auto; */
-    /* align-self: center; */
+    /* margin: auto; 
+     align-self: center; */
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -2573,8 +2579,13 @@ p {
     display: table;
     font-size: 95%;
     margin-bottom: 1em;
+    left: 0px;
+    position: fixed;
     padding: 20px;
     width: auto;
+    margin-left:10px;
+    text-align: left;
+    float: right;
 }
 
     .toc h1,
@@ -2616,4 +2627,10 @@ p {
  #align{
     width: 90%;
     margin: auto;
+}
+
+.navbar-nav .nav-item.active > 
+a::before, .navbar-nav .nav-item:hover > 
+a::before {
+    width: 100%;
 }
