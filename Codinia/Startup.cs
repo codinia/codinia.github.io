@@ -28,9 +28,9 @@ namespace Codinia
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews()
+                .AddRazorRuntimeCompilation();
             services.AddNotyf(config => { config.DurationInSeconds = 10; config.IsDismissable = true; config.Position = NotyfPosition.TopRight; });
-
             string connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<CodiniaContext>(c => c.UseSqlServer(connectionString));
         }

@@ -12,13 +12,11 @@ namespace Codinia.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly INotyfService _notyf;
-
         public HomeController(ILogger<HomeController> logger, INotyfService notyf)
         {
             _logger = logger;
             _notyf = notyf;
         }
-       
         public IActionResult Index()
         {
             return View();
@@ -27,14 +25,39 @@ namespace Codinia.Controllers
         {
             return View();
         }
-       
-       
+        public IActionResult Services()
+        {
+            return View();
+        }
+        public IActionResult WebDevelopment()
+        {
+            return View();
+        }
+        public IActionResult DigitalMarketing()
+        {
+            return View();
+        }
+        public IActionResult MobileApps()
+        {
+            return View();
+        }
+        public IActionResult SeoConsultancy()
+        {
+            return View();
+        }
+        public IActionResult GraphicDesign()
+        {
+            return View();
+        }
+        public IActionResult WebCrawling()
+        {
+            return View();
+        }
         [HttpPost]
         public IActionResult ContactUs(FormModel form)
         {
             try
             {
-
                 using (SmtpClient smtp = new SmtpClient())
                 {
                     string subject = "A new message has received from "  + form.name;

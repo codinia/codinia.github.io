@@ -1,4 +1,4 @@
-﻿@model BlogPost
+﻿@model Codinia.Models.BlogPost
 @{
     ViewBag.PostTitle = "Codinia | " + Model.PostTitle;
     ViewBag.PostTags = Model.PostTags;
@@ -7,30 +7,48 @@
     Layout = "~/Views/Shared/_BlogLayout.cshtml";
 }
 <section id="blog " class="blog_area pt-115 pb-120 ">
-    <div class="container ">
-        <div class="container-fluid">
+    <div class="container">
+        <div class="row">
             <div class="blog-content-area ">
-                <div class="row justify-content-center blog-background ">
-                </div>
-                <div claas="wow bounceInUp"><h2>Hello I am for animation</h2></div>
-                <div class="blog_content ">
-                    <h1> @Html.Raw(Model.PostTitle)</h1>
-                    <ul class="blog_meta d-flex justify-content-center ">
-                        <li>By: <a href="@Html.Raw(Model.AuthorURL)">@Html.Raw(Model.AuthorName)</a>&nbsp; / &nbsp;</li>
-                        <li>03 Feb 2021</li>
-                    </ul>
-                    <div style="text-align: center;">
-                        <img class="blog-img-section img-responsive" style="max-height: 500px;" src="@Html.Raw(Model.ThumbnailImageUrl)">
+                <div class="row  col-mx justify-content-center blog-background">
+                    <div claas="wow bounceInUp">
+                        <div class="blog_content ">
+                            <h1>
+                                @Html.Raw(Model.PostTitle)
+                            </h1>
+                            <ul class="blog_meta d-flex justify-content-center ">
+                                <li>By: <a href="@Model.AuthorURL">@Model.AuthorName</a>&nbsp; / &nbsp;</li>
+                                <li>03 Feb 2021</li>
+                            </ul>
+                            <div style="text-align: center;">
+                                <img class="blog-img-section img-responsive" style="max-height: 500px;" src="@Html.Raw(Model.ThumbnailImageUrl)">
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="blog_content ">
+            <div class="row">
+                <section>
                     @Html.Raw(Model.TableOfContent)
+                </section>
+                <div class="mx-auto col-md-8">
                     @Html.Raw(Model.PostContent)
-
-
-
-                @await Component.InvokeAsync("RelatedBlog" , new { category = Model.Category })
-                    
-                    <div id="disqus_thread"></div>
-                    <script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            @await Component.InvokeAsync("RelatedBlog", new { category = Model.Category })
+        </div>
+    </div>
+    <div class="container">
+        <div id="disqus_thread"></div>
+        <script>
     var disqus_config = function () {
         this.page.url = "@Context.Request.Scheme://@Context.Request.Host@Context.Request.Path";
         this.page.identifier = "@Context.Request.Scheme://@Context.Request.Host@Context.Request.Path";
@@ -41,12 +59,9 @@
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
-                    </script>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-                    <script id="dsq-count-scr" src="//codinia-com.disqus.com/count.js" async></script>
-                </div>
-            </div>
-        </div>
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <script id="dsq-count-scr" src="//codinia-com.disqus.com/count.js" async></script>
     </div>
 </section>
 

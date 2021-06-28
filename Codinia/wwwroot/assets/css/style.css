@@ -17,7 +17,8 @@
 }
 
 img {
-    max-width: 100%
+    max-width: 100%;
+    
 }
 
 a:focus,
@@ -43,9 +44,9 @@ a {
     color: #0177bf
 }*/
 
-    a:hover {
-        color: #0177bf
-    }
+a:hover {
+    color: #0177bf
+}
 
 audio,
 canvas,
@@ -489,7 +490,8 @@ s .slick-slide {
 }
 
 .navbar-brand {
-    height: 60px;
+    height: 70px;
+    
 }
 
 .navbar-toggler {
@@ -628,7 +630,7 @@ s .slick-slide {
 .justify-content-around {
     -ms-flex-pack: justify !important;
     justify-content: space-between !important;
-    align-content:flex-start;
+    align-content: flex-start;
 }
 
 @media(max-width:767px) {
@@ -711,7 +713,7 @@ s .slick-slide {
 }
 
 
-.navbar-nav .nav-item.active>a::before, .navbar-nav .nav-item:hover>a::before {
+.navbar-nav .nav-item.active > a::before, .navbar-nav .nav-item:hover > a::before {
     width: 100%;
 }
 
@@ -998,7 +1000,8 @@ s .slick-slide {
             position: relative;
             z-index: 9
         }
-.header_hero_content ul li .play::before {
+
+            .header_hero_content ul li .play::before {
                 position: absolute;
                 content: '';
                 top: 0;
@@ -1291,11 +1294,9 @@ s .slick-slide {
 .about_content .about_list li .about_list_content {
     padding-left: 20px;
 }
-
 .work_area {
     background-color: #fbfbff
 }
-
 .single_work {
     -webkit-box-shadow: 0 3px 27px 0 rgba(157, 106, 106, .1);
     -moz-box-shadow: 0 3px 27px 0 rgba(157, 106, 106, .1);
@@ -1306,11 +1307,9 @@ s .slick-slide {
     margin-bottom: 30px;
     background-color: #fff
 }
-
     .single_work .work_image img {
         width: 100%
     }
-
     .single_work .work_content {
         padding: 30px;
         position: relative
@@ -2425,6 +2424,9 @@ p.form-message.error {
 .partner-logo-col {
     max-width: 33%;
 }
+.logo{
+    height: 50px;
+}
 
 .logo-text {
     color: #fff;
@@ -2576,22 +2578,59 @@ p {
 .toc {
     background: #f9f9f9 none repeat scroll 0 0;
     border: 1px solid #aaa;
-    display: table;
+    display: block;
     font-size: 95%;
-    margin-bottom: 1em;
+    margin-bottom: 0;
     left: 0px;
-    position: fixed;
+    top: 100px;
+    position: sticky;
     padding: 20px;
-    width: auto;
-    margin-left:10px;
+    width: 280px;
+    margin-top: 80px;
+    margin-left: 10px;
     text-align: left;
     float: right;
 }
+
+
 
     .toc h1,
     .toc ul li {
         list-style-type: decimal;
     }
+
+    .toc .pl-20 {
+        position: sticky;
+        top: 2rem;
+        align-self: start;
+    }
+
+    .toc a {
+        text-decoration: none;
+        display: block;
+        padding: .125rem 0;
+        color: #000000;
+        transition: all 50ms ease-in-out;
+    }
+
+        .toc a:hover,
+        .toc a:focus {
+            color: #ccc;
+        }
+
+ul, ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-left: 1rem;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 .blog-content-list li {
     font-size: 28px;
@@ -2624,13 +2663,18 @@ p {
     top: 0;
     width: 100%;
 }
- #align{
+
+#align {
     width: 90%;
     margin: auto;
 }
 
-.navbar-nav .nav-item.active > 
-a::before, .navbar-nav .nav-item:hover > 
+.navbar-nav .nav-item.active >
+a::before, .navbar-nav .nav-item:hover >
 a::before {
     width: 100%;
+}
+.Graphic-design{
+    padding:50px;
+    
 }

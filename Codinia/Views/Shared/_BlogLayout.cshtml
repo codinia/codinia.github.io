@@ -19,12 +19,13 @@
     <link rel="stylesheet" href="~/assets/css/default.css">
     <link rel="stylesheet" href="~/assets/css/style.css">
     <link rel="stylesheet" href="~/assets/css/slick.css">
+
 </head>
 <body>
 
-    <partial name="~/Views/Shared/PartialViews/_Header.cshtml"/>
+    <partial name="~/Views/Shared/PartialViews/_Header.cshtml" />
     @RenderBody();
-    <partial name="~/Views/Shared/PartialViews/_Footer.cshtml"/>
+    <partial name="~/Views/Shared/PartialViews/_Footer.cshtml" />
 
     <a href="# " class="back-to-top "><i class="lni lni-chevron-up "></i></a>
     <script src="~/assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -38,6 +39,26 @@
     <script src="~/assets/js/scrolling-nav.js"></script>
     <script src="~/assets/js/ajax-contact.js"></script>
     <script src="~/assets/js/wow.min.js"></script>
+    <script src="~/assets/js/Scrolling.js"></script>
+    @*<script>window.addEventListener('DOMContentLoaded', () => {
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    const id = entry.target.getAttribute('id');
+                    if (entry.intersectionRatio > 0) {
+                        document.querySelector(`div li a[href="#${id}"]`).parentElement.classList.add('active');
+                    } else {
+                        document.querySelector(`div li a[href="#${id}"]`).parentElement.classList.remove('active');
+                    }
+                });
+            });
+
+            // Track all sections that have an `id` applied
+            document.querySelectorAll('section[id]').forEach((section) => {
+                observer.observe(section);
+            });
+
+        });</script>*@
     <script src="~/assets/js/main.js"></script>
     @await Component.InvokeAsync("Notyf")
     <script id="dsq-count-scr" src="//codinia-com.disqus.com/count.js" async></script>
