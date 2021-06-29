@@ -18,7 +18,6 @@
 
 img {
     max-width: 100%;
-    
 }
 
 a:focus,
@@ -491,7 +490,6 @@ s .slick-slide {
 
 .navbar-brand {
     height: 70px;
-    
 }
 
 .navbar-toggler {
@@ -1181,7 +1179,8 @@ s .slick-slide {
     top: 0;
     left: 0;
     width: min-content;
-    height: 100%
+    height: 90%;
+    padding-left:20px
 }
 
 @media only screen and (min-width:768px) and (max-width:991px) {
@@ -1294,9 +1293,11 @@ s .slick-slide {
 .about_content .about_list li .about_list_content {
     padding-left: 20px;
 }
+
 .work_area {
     background-color: #fbfbff
 }
+
 .single_work {
     -webkit-box-shadow: 0 3px 27px 0 rgba(157, 106, 106, .1);
     -moz-box-shadow: 0 3px 27px 0 rgba(157, 106, 106, .1);
@@ -1307,9 +1308,11 @@ s .slick-slide {
     margin-bottom: 30px;
     background-color: #fff
 }
+
     .single_work .work_image img {
         width: 100%
     }
+
     .single_work .work_content {
         padding: 30px;
         position: relative
@@ -2424,7 +2427,8 @@ p.form-message.error {
 .partner-logo-col {
     max-width: 33%;
 }
-.logo{
+
+.logo {
     height: 50px;
 }
 
@@ -2674,7 +2678,85 @@ a::before, .navbar-nav .nav-item:hover >
 a::before {
     width: 100%;
 }
-.Graphic-design{
-    padding:50px;
-    
+
+.Graphic-design {
+    padding: 50px;
+}
+
+.page-banner {
+    background-image: url('../images/Web-Development.jpg');
+    background-color: #dadada;
+    height: 150px;
+    /* opacity: 0.2;*/
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    padding: 60px 0;
+}
+
+.services-sub-heading {
+    text-align: center;
+    padding: 25px 0px;
+}
+
+.services-heading {
+    padding: 25px 0px;
+}
+
+.background-color {
+    background: #fafafa;
+    padding: 20px 0px;
+    margin-top: 30px;
+}
+
+.serviceBox {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #eee;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding: 20px 15px;
+    margin: 20px 0 0;
+    border-radius: 20px 0 20px 0;
+    position: relative;
+    z-index: 1;
+    transition: all ease .3s;
+}
+
+    .serviceBox .service-icon img {
+        height: 150px;
+    }
+
+    .serviceBox p.description {
+        font-size: 13px;
+        line-height: 25px;
+        margin-bottom: 10px;
+    }
+
+.no-wrap-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media only screen and (min-width: 767px) {
+    .serviceBox .description {
+        max-height: 130px;
+        min-height: 130px;
+    }
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    margin-top: 0;
+}
+
+.about-set {
+    padding-bottom: 30px
 }

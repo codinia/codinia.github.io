@@ -25,42 +25,34 @@ namespace Codinia.Controllers
         {
             return View();
         }
+
+        public IActionResult About()
+        {
+            return View();
+        }
+        public IActionResult Whyus()
+        {
+            return View();
+        }
         public IActionResult Services()
         {
             return View();
         }
-        public IActionResult WebDevelopment()
+        public IActionResult TrustedBy()
         {
             return View();
         }
-        public IActionResult DigitalMarketing()
+        public IActionResult Contact()
         {
             return View();
         }
-        public IActionResult MobileApps()
-        {
-            return View();
-        }
-        public IActionResult SeoConsultancy()
-        {
-            return View();
-        }
-        public IActionResult GraphicDesign()
-        {
-            return View();
-        }
-        public IActionResult WebCrawling()
-        {
-            return View();
-        }
-        [HttpPost]
         public IActionResult ContactUs(FormModel form)
         {
             try
             {
                 using (SmtpClient smtp = new SmtpClient())
                 {
-                    string subject = "A new message has received from "  + form.name;
+                    string subject = "A new message has received from " + form.name;
                     smtp.Host = "smtp.gmail.com";
 
                     smtp.Port = 587;
@@ -80,7 +72,7 @@ namespace Codinia.Controllers
             }
             return Redirect("/");
         }
-        
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
