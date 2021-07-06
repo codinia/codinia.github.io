@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <script data-ad-client="ca-pub-5682279583835823" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta charset="utf-8">
+    <title>@ViewBag.PostTitle</title>
+    <meta name="keywords" content="@ViewBag.PostTags" />
+    <meta name="description" content="@ViewBag.PostDescription">
+    <meta name="author" content="@ViewBag.AuthorName">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="~/assets/images/footer-img.png" type="image/png">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="~/assets/css/animate.css" />
+    <link rel="stylesheet" href="~/assets/css/slick.css">
+    <link rel="stylesheet" href="~/assets/css/slick-theme.css" />
+    <link rel="stylesheet" href="~/cdn.lineicons.com/2.0/LineIcons.css">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/css/default.css">
+    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link href="~/assets/css/styleside.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/assets/css/slick.css">
+
+</head>
+<body>
+    @*<button type="button" id="sidebarCollapse" class=" btn btn-sidebar float-left position-fixed top:0">
+        <i class="fas fa-align-left"></i>
+    </button>*@
+    <partial name="~/Views/Shared/PartialViews/_BlogPostHeader.cshtml" />
+
+    @RenderBody();
+
+    <partial name="~/Views/Shared/PartialViews/_Footer.cshtml" />
+
+    <a href="# " class="back-to-top "><i class="lni lni-chevron-up "></i></a>
+    <script src="~/assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="~/assets/js/vendor/modernizr-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script src="~/assets/js/popper.min.js"></script>
+    <script src="~/assets/js/bootstrap.min.js"></script>
+    <script src="~/assets/js/slick.min.js"></script>
+    <script src="~/assets/js/jquery.easing.min.js"></script>
+    <script src="~/assets/js/scrolling-nav.js"></script>
+    <script src="~/assets/js/ajax-contact.js"></script>
+    <script src="~/assets/js/wow.min.js"></script>
+    <script src="~/assets/js/Scrolling.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            var navSelector = "#toc";
+            var $myNav = $(a);
+            Toc.init($myNav);
+            $("body").scrollspy({
+                target: navSelector
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            var navSelector = "#blog-toc";
+            var $myNav = $(navSelector);
+            blog - Toc.init($myNav);
+            $("wrapper").scrollspy({
+                target: navSelector
+            });
+        });
+    </script>
+    <script src="~/assets/js/main.js"></script>
+    @await Component.InvokeAsync("Notyf")
+    <script id="dsq-count-scr" src="//codinia-com.disqus.com/count.js" async></script>
+</body>
+</html>

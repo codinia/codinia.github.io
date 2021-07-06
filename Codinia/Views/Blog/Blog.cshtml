@@ -4,58 +4,60 @@
     ViewBag.PostTitle = "Codina | Recent from the blog";
     Layout = "~/Views/Shared/_BlogLayout.cshtml";
 }
-<section id="blog " class="blog_area pt-115 pb-120 ">
-    <div class="container">
-        <div class="breadcrumb">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item active" aria-current="#Home"><i class="fa fa-home fa-lg" aria-hidden="true"></i></li>
-                    <li class="breadcrumb-item"><a href="#blog">Blog</a></li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <div class="container ">
-        <div class="row justify-content-center ">
-            <div class="col-lg-6 ">
-                <div class="section_title text-center pb-25 ">
-                    <h5 class="sub_title ">Blog</h5>
-                    <h4 class="main_title ">From The Blog</h4>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center blog-background ">
-            @foreach (var blogpost in Model)
-            {
-                <div class="col-lg-4 col-md-7 " style="padding-bottom: 20px; ">
-                    <div class="card single_blog mt-30 wow fadeIn" data-wow-duration="0.5s " data-wow-delay="0.3s " style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.3s; animation-name: fadeIn;">
-                        <a class="" href="blog-post/@blogpost.PostURL">
-                            <div>
-                                <h5 class="blog_title ">
-                                    @blogpost.PostTitle
-                                </h5>
-                                <div class="blog_content">
-                                    <ul id="align">
-                                        <li class="pull-left"><i class="fas fa-comment"></i> <a href="blog-post/@blogpost.PostURL#disqus_thread"></a></li>
-                                        <li class="pull-right">@blogpost.ReadTime</li>
-                                    </ul>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="wrapper">
+            <!-- Page Content  -->
+            <div id="content">
+                <section id="blog " class="blog_area  pb-120 ">
+                    <div class="container">
+                    </div>
+                    <div class="container ">
+                        <div class="row justify-content-center ">
+                            <div class="col-lg-4 ">
+                                <div class="section_title text-center pb-25 ">
+                                    <h5 class="sub_title ">Blog</h5>
+                                    <h4 class="main_title ">From The Blog</h4>
                                 </div>
                             </div>
-                            <div class="blog_image ">
-                                <img class="card-img-top img-fluid" src='@blogpost.ThumbnailImageUrl' alt="blog ">
-                            </div>
-                        </a>
-                        <div class="card-body">
-                            <div class="blog_content">
-                                <ul class="blog_meta d-flex justify-content-between text-left" id="author">
-                                    <li class="">By: <a href='@blogpost.AuthorURL'>@blogpost.AuthorName</a></li>
-                                    <li class="">@blogpost.PostDate.ToString("dd MMM yyyy")</li>
-                                </ul>
-                            </div>
+                        </div>
+                        <div class="row justify-content-center blog-background ">
+                            @foreach (var blogpost in Model)
+                            {
+                                <div class="col-lg-4 col-md-7 " style="padding-bottom: 20px; ">
+                                    <div class="card single_blog mt-30 wow fadeIn" data-wow-duration="0.5s " data-wow-delay="0.3s " style="visibility: visible; animation-duration: 0.5s; animation-delay: 0.3s; animation-name: fadeIn;">
+                                        <a class="" href="blog-post/@blogpost.PostURL">
+                                            <div>
+                                                <h5 class="blog_title ">
+                                                    @blogpost.PostTitle
+                                                </h5>
+                                                <div class="blog_content">
+                                                    <ul id="align">
+                                                        <li class="pull-left"><i class="fas fa-comment"></i> <a href="blog-post/@blogpost.PostURL#disqus_thread"></a></li>
+                                                        <li class="pull-right">@blogpost.ReadTime</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="blog_image ">
+                                                <img class="card-img-top img-fluid" src='@blogpost.ThumbnailImageUrl' alt="blog ">
+                                            </div>
+                                        </a>
+                                        <div class="card-body">
+                                            <div class="blog_content">
+                                                <ul class="blog_meta d-flex justify-content-between text-left" id="author">
+                                                    <li class="">By: <a href='@blogpost.AuthorURL'>@blogpost.AuthorName</a></li>
+                                                    <li class="">@blogpost.PostDate.ToString("dd MMM yyyy")</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
                         </div>
                     </div>
-                </div>
-            }
+                </section>
+            </div>
         </div>
     </div>
-</section>
+</div>

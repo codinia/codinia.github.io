@@ -13,9 +13,8 @@ namespace Codinia.ViewComponents
         }
         public IViewComponentResult Invoke(string category)
         {
-            var blogpost = _dbcontext.BlogPost.Where(o => o.Category.Equals(category)).ToList();
+            var blogpost = _dbcontext.BlogPost.Where(o => o.Category.Equals(category)).Take(3).ToList();
             return View(blogpost);
-            
         }
     }
 }

@@ -696,3 +696,6 @@ C:\Codinia\codinia.github.io\Codinia\obj\Debug\netcoreapp3.1\Razor\Views\Home\Wh
 C:\Codinia\codinia.github.io\Codinia\obj\Debug\netcoreapp3.1\Razor\Views\Home\Contact.cshtml.g.cs
 C:\Codinia\codinia.github.io\Codinia\obj\Debug\netcoreapp3.1\Razor\Views\Home\TrustedBy.cshtml.g.cs
 C:\Codinia\codinia.github.io\Codinia\obj\Debug\netcoreapp3.1\Razor\Views\Blog\CreateBlog.cshtml.g.cs
+C:\Codinia\codinia.github.io\Codinia\obj\Debug\netcoreapp3.1\Razor\Views\Blog\TempBlog.cshtml.g.cs
+C:\Codinia\codinia.github.io\Codinia\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_BlogPostLayout.cshtml.g.cs
+C:\Codinia\codinia.github.io\Codinia\obj\Debug\netcoreapp3.1\Razor\Views\Shared\PartialViews\_BlogPostHeader.cshtml.g.cs

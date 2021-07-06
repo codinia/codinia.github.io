@@ -1,10 +1,83 @@
-﻿<div class="container">
-    <div class="row">
-        <div class="col-md-12 col-md-12 col-xl-12">
-            <form>
-                <input class=""/>
+﻿@model Codinia.ViewModels.CreateViewModel
 
-            </form>
+<section class="pt-115">
+    <div class="container">
+        <div class="create-blog row">
+            <div class="col-md-12 col-md-12 col-xl-12">
+                <form enctype="multipart/form-data" asp-controller="Blog" asp-action="CreateBlog" method="post">
+                    <div class="form-row">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group col-md-6 col-sm-6">
+                            <label asp-for="PostTitle">Enter your Blog title:</label>
+                            <input asp-for="PostTitle" type="text" class="form-control" id="inputEmail4" placeholder="Blog Title">
+                            <span asp-validation-for="PostTitle" class="text-danger"></span>
+                        </div>
+
+                        @*<div class="form-group row">
+                            <label asp-for="Photo" class="col-sm-2 col-form-label"></label>
+                            <div class="col-sm-4">
+                                <input asp-for="Photo" class="form-control custom-file-input" type="file" />
+                                <label class="custom-file-label">Choose file...</label>
+                            </div>
+
+                        </div>*@
+
+                        <div class="form-group col-md-6 col-sm-6">
+                            <label asp-for="Photo">Upload the bolg picure:</label>
+                            <input asp-for="Photo" type="file" class="form-control-file" id="exampleFormControlFile1">
+                            <span asp-validation-for="Photo"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6 col-sm-6">
+                            <label asp-for="AuthorURL">Author Link:</label>
+                            <input asp-for="AuthorURL" type="text" class="form-control" id="inputEmail4" placeholder="Author link">
+                            <span asp-validation-for="AuthorURL"></span>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6">
+                            <label asp-for="AuthorName">Author Name:</label>
+                            <input asp-for="AuthorName" type="text" class="form-control" id="inputEmail4" placeholder="Author Name">
+                            <span asp-validation-for="AuthorName"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6 col-sm-6">
+                            <label asp-for="Category">Category:</label>
+                            <input asp-for="Category" type="text" class="form-control" id="inputEmail4" placeholder="Category">
+                            <span asp-validation-for="Category"></span>
+                        </div>
+                        <div class="form-group col-md-6 col-sm-6">
+                            <label asp-for="ReadTime">Read Time:</label>
+                            <input asp-for="ReadTime" type="text" class="form-control" id="inputEmail4" placeholder="Read Time">
+                            <span asp-validation-for="ReadTime"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-12 col-sm-12">
+                            <label asp-for="PostTags">PostTags:</label>
+                            <input asp-for="PostTags" type="text" class="form-control" id="inputEmail4" placeholder="PostTags">
+                            <span asp-validation-for="PostTags"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="TableOfContent">Enter blog TableOfContent:</label>
+                        <textarea asp-for="TableOfContent" class="form-control" rows="5" id="comment"></textarea>
+                        <span asp-validation-for="TableOfContent"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PostDescription">Post Description:</label>
+                        <textarea asp-for="PostDescription" class="form-control" rows="5" id="comment" placeholder="Post Description..."></textarea>
+                        <span asp-validation-for="PostDescription"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PostContent">Blog Body:</label>
+                        <textarea asp-for="PostContent" class="form-control" rows="5" id="comment" placeholder="Write your Blog here..."></textarea>
+                        <span asp-validation-for="PostContent"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Create it</button>
+                </form>
+            </div>
         </div>
     </div>
-</div>
+</section>
