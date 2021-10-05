@@ -1,0 +1,81 @@
+﻿@model codiniatestmvc.Models.Blog
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script src="~/ckeditor/ckeditor.js"></script>
+    <link href="~/ckeditor/contents.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="col-lg-8 mt-5 mt-lg-0 container">
+        <h1>Blog Post</h1>
+        <form class=" margin" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-6 col-lg-12 form-group">
+                   
+                    @Html.DropDownListFor(model => model.CategoryID, new SelectList(Model.categoriesCollection, "Id", "Name"), "select")
+
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <input asp-for="Blog_Title" type="text" class="form-control" placeholder="Blog_Title " required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input asp-for="blogimagefile" type="file" class="form-control" required>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col">
+                    <textarea asp-for="blog_Content" id="blog_Content" class="ckeditor " name="blog_Content"></textarea>
+                </div>
+
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <input asp-for="Author_Name" type="text" class="form-control" name="Author_Name" id="Author_Name" placeholder="Author_Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input asp-for="Author_Link" type="text" class="form-control" name="Author_Link" id="Author_Link" placeholder=" Author_Link" required>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <input asp-for="BlogPost_Tags" type="text" name="BlogPost_Tags" class="form-control" id="BlogPost_Tags" placeholder="Post Tags" required>
+                </div>
+                <div class="col-md-6 form-group">
+                    <input asp-for="Blog_Description" type="text" class="form-control" name="Blog_Description" id="Blog_Description" placeholder="Blog_Description" />
+                </div>
+            </div>
+
+
+
+
+
+            <br />
+            <div class="form-group">
+                <div class="col-lg-offset-3 col-lg-6">
+                    <button class="btn btn-primary" type="submit" asp-action="Create" asp-controller="Blogs">Save</button>
+                    <button class="btn btn-danger" type="button">Cancle</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <script>
+        CKEDITOR.replace('blog_Content',
+            {
+                extraPlugins: 'codesnippet',
+                codeSnippet_theme: 'monokai_sublime',
+                height: 356,
+                removeButtons: 'PasteFromWord'
+            })
+    </script>
+</body>
+</html>

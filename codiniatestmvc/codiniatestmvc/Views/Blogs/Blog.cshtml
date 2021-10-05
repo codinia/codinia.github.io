@@ -1,0 +1,50 @@
+﻿@model IEnumerable<codiniatestmvc.Models.Blog>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Blogs";
+}
+
+
+
+
+
+
+
+
+
+
+
+<div class="main">
+        <h1> Blogs</h1>
+        
+        <ul class="cards row">
+            @foreach (var item in Model)
+            {
+                <li class="cards_item">
+                    <div class="card">
+                        <div class="card_image"><img src="@item.Blog_Image" ></div>
+                        <div class="card_content">
+                            <h2 class="card_title">@Html.DisplayFor(modelItem => item.Blog_Title)</h2>
+                            <p class="card_text">@Html.DisplayFor(modelItem => item.Blog_Description).</p>
+                            <ul class="post-meta list-inline">
+                                <li class="list-inline-item">
+                                    <i class="fa fa-user-circle-o card_text">@Html.DisplayFor(modelItem => item.Author_Name).</i>
+                                </li>
+                                <li class="list-inline-item">
+                                    <i class="fa fa-calendar-o card_text">29 June 2017</i>
+                                </li>
+                                <li class="list-inline-item">
+                                    <i class="fa fa-tags card_text">@Html.DisplayFor(modelItem => item.Author_Link).</i>
+                                </li>
+                            </ul>
+                            <i class="fa fa-comment"></i> <a href="/blogs/@item.blog_url/#disqus_thread"></a>
+                            <a href="/blogs/@item.blog_url" class="btn card_btn">Read More</a>
+                        </div>
+                    </div>
+                </li>
+            }
+            </ul>
+        
+    </div>
